@@ -1,0 +1,11 @@
+<section style="width: 100vw; height: 100vh; position: absolute; top: 0px; left: 0px; display: grid; grid-template-columns: 100%; grid-template-rows: 100%; justify-items: center; align-items: center">
+  <div #progressBar id="progressBar">
+    <div #inside id="inside">
+        <div></div>
+        <p id="emoji">{{ emoji }}</p>
+    </div>
+</div>
+<div *ngFor="let a of sentiment.list" style="display: grid; justify-items: center; margin: 10px;">
+  <a [href]="a.url" [ngStyle]="{'color':'rgb(0,'+(a.sentiment + 5)*255/10+',0)'}" style="text-decoration: none;">{{ a.title }} {{ a.sentiment }}</a>
+</div>
+</section>

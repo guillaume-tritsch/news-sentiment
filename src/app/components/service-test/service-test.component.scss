@@ -1,0 +1,79 @@
+#progressBar {
+  margin: 40px;
+  height: 600px;
+  width: 60px;
+  display: flex;
+  border-radius: 50px;
+  box-shadow:
+    0px 0px 3.8px rgba(0, 0, 0, 0.041),
+    0px 0px 8.7px rgba(0, 0, 0, 0.052),
+    0px 0px 15.4px rgba(0, 0, 0, 0.058),
+    0px 0px 25.1px rgba(0, 0, 0, 0.063),
+    0px 0px 41.3px rgba(0, 0, 0, 0.067),
+    0px 0px 75.8px rgba(0, 0, 0, 0.074),
+    0px 0px 204px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px gray
+;
+}
+
+#inside {
+  transition: 0.1s all;
+  width: 100%;
+  margin-top: auto;
+  height: 0px;
+  justify-content: center;
+  justify-items: center;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  display: grid;
+
+  div {
+    height: 100%;
+    width: 100%;
+    background-color:#ff3434; // rotate hue to 130deg
+    transition: 0.1s all;
+  border-radius: 50px;
+
+  }
+
+  * {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+}
+
+#emoji {
+  user-select: none;
+  transition: 0.1s all;
+  font-size: 80px;
+  top: -40px;
+  position: relative;
+  margin: 0px;
+  height: fit-content;
+  width: fit-content;
+}
+
+.animationFinish {
+  #emoji {
+
+    animation: 0.8s e;
+    animation-iteration-count: 1;
+    animation-fill-mode:forwards;
+  }
+}
+
+@keyframes e {
+  0% {
+    font-size: 80px;
+  top: -40px;
+  }
+  50% {
+    font-size: 120px;
+    top: -60px;
+  }
+  100% {
+    font-size: 100px;
+  top: -50px;
+  }
+}
